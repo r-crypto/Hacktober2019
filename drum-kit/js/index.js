@@ -1,5 +1,6 @@
+// Gives out the number of drum buttons
 var numberOfDrumButtons = document.querySelectorAll(".drum").length;
-
+// Checks for a press of a drum button through all buttons
 for (var i = 0; i < numberOfDrumButtons; i++) {
 
   document.querySelectorAll(".drum")[i].addEventListener("click", function() {
@@ -13,7 +14,7 @@ for (var i = 0; i < numberOfDrumButtons; i++) {
   });
 
 }
-
+// Gives out a specific sound for a keypress
 document.addEventListener("keypress", function(event) {
 
   makeSound(event.key);
@@ -22,7 +23,7 @@ document.addEventListener("keypress", function(event) {
 
 });
 
-
+// Specifies which sound to give on which keypress
 function makeSound(key) {
 
   switch (key) {
@@ -67,7 +68,7 @@ function makeSound(key) {
   }
 }
 
-
+//Animates the button on keypress
 function buttonAnimation(currentKey) {
 
   var activeButton = document.querySelector("." + currentKey);
